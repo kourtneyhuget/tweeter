@@ -4,13 +4,14 @@ header {
   height: 400px;
   width: 100%;
   justify-content: center;
+  align-items: center;
 }
 
 #headerImage {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* padding-top: 20px; */
+  padding-top: 20px;
 }
 
 #headerName {
@@ -18,3 +19,5 @@ header {
   justify-content: center;
   align-items: center;
 }
+
+
