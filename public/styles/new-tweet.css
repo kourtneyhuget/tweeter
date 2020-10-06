@@ -1,0 +1,28 @@
+section {
+  width: 100%
+}
+
+.new-tweet {
+  align-items: center;
+  justify-content: center;
+}
+
+.text-line {
+  display: block;
+  width: 100%;
+  background-color: #f4f1ec;
+  border: none;
+  border-bottom: 3px solid black;
+}
+
+#tweetButton {
+  font-family: Bungee, sans-serif;
+  color: white;
+  background-color: #4056A1
+}
+
+#counter {
+  align-items: flex-end;
+  float: right;
+  font-family: Bungee;
+}

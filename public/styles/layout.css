@@ -34,14 +34,14 @@ body {
  */
 
 main {
+  display: flex;
   width: 90%;
   background-color: #f4f1ec;
-  border: 1px solid red;
+  margin: 0 auto;
  }
 
 .container {
   display: flex;
-  border: 1px solid green;
   align-items: center;
   align-content: center;
   justify-content: center;
