@@ -22,7 +22,10 @@ section {
 }
 
 #counter {
-  align-items: flex-end;
   float: right;
   font-family: Bungee;
+}
+
+.redColor {
+  color: red; 
 }
