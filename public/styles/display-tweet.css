@@ -45,11 +45,11 @@
   box-shadow: 10px 10px 5px #f5b8dd;
 }
 
-.username {
+.handle {
   visibility: hidden;
   color: #f5b8dd;
 }
 
-.display-tweet:hover .username {
+.display-tweet:hover .handle {
   visibility: visible;
 }
