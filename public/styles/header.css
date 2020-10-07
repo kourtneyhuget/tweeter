@@ -1,4 +1,4 @@
-header {
+#main-header {
   background-color: #f5b8dd;
   background-image: url("https://www.transparenttextures.com/patterns/food.png");
   height: 400px;
@@ -7,14 +7,14 @@ header {
   align-items: center;
 }
 
-#headerImage {
+#header-image {
   display: flex;
   justify-content: center;
   align-items: center;
   padding-top: 20px;
 }
 
-#headerName {
+#header-name {
   display: flex;
   justify-content: center;
   align-items: center;
