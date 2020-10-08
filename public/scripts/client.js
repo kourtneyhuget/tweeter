@@ -31,8 +31,8 @@ const submitHandler = function (event) {
       url: "/tweets/",
       data: text
     }).then(function () {
-      loadtweets();
       console.log('Successfully submitted');
+      document.getElementById("tweet-form").reset();
     });
   }
 };
