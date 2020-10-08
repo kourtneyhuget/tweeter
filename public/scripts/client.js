@@ -33,6 +33,10 @@ const submitHandler = function (event) {
     }).then(function () {
       console.log('Successfully submitted');
       document.getElementById("tweet-form").reset();
+      $.ajax('/tweets/', { method: 'GET' })
+        .then(function (res, err) {
+          renderTweets([res[res.length - 1]]);
+        });
     });
   }
 };
@@ -68,9 +72,17 @@ const renderTweets = function (tweets) {
   for (let tweet of tweets) {
     const $tweetElement = createTweetElement(tweet);
     console.log("create tweet", $tweetElement);
-    $container.append($tweetElement);
+    $container.prepend($tweetElement);
   }
 };
+
+const escape = function (str) {
+  let p = document.createElement('p');
+  p.appendChild(document.createTextNode(str));
+  return p.innerHTML;
+};
+
+const safeHTML = `<p>${escape(text.user.handle)}</p>`;
 
 const createTweetElement = function (tweet) {
   const dateObj = new Date(tweet.created_at * 1000);
@@ -84,7 +96,7 @@ const createTweetElement = function (tweet) {
     </div>
     <p class="handle">${tweet.user.handle}</p>
     </header >
-    <p class="tweet">${tweet.content.text}</p>
+    safeHTML
     <footer class="footer-tweet-child">
     <p class="days-ago">${time}</p>
     <p class="icons"> &#127988 &#x2794 &#10084 </p>
@@ -92,3 +104,6 @@ const createTweetElement = function (tweet) {
     </article >;`);
   return $tweet;
 };
+
+
+// <p class="tweet">${tweet.content.text}</p> 
