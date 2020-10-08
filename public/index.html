@@ -52,19 +52,18 @@
   <main class="container">
     <section class="new-tweet">
       <h2>Compose Tweet</h2>
-      <form method="POST" action="/tweets/">
+      <form id="tweet-form" method="POST" action="/tweets/">
         <label for="tweet-text"><b>What are you humming about?</label></b></label>
-        <textarea id="tweet-text" class="text-line"></textarea>
+        <textarea id="tweet-text" name="text"></textarea>
         <div>
           <br>
-          <button id="tweetButton" type="submit">Tweet</button>
-          <output id="counter" name="counter" class="counter" for="tweet-text">140</output>
+          <button id="tweet-button" type="submit">Tweet</button>
+          <output name="counter" class="counter" for="tweet-text">140</output>
         </div>
       </form>
     </section>
-    <br>
     <section class="tweets-container">
-      <article class="display-tweet">
+      <!-- <article class="display-tweet">
         <header class="header-tweet-child">
           <div>
             <img src="https://i.imgur.com/nlhLi3I.png" />
@@ -77,7 +76,7 @@
           <p class="days-ago">10 days-ago</p>
           <p class="icons"> &#127988 &#x2794 &#10084 </p>
         </footer>
-      </article>
+      </article> -->
     </section>
   </main>
 </body>

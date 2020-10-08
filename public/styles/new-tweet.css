@@ -7,7 +7,7 @@ section {
   justify-content: center;
 }
 
-.text-line {
+#tweet-text {
   display: block;
   width: 100%;
   background-color: #f4f1ec;
@@ -15,13 +15,13 @@ section {
   border-bottom: 3px solid black;
 }
 
-#tweetButton {
+#tweet-button {
   font-family: Bungee, sans-serif;
   color: white;
   background-color: #4056A1
 }
 
-#counter {
+.counter {
   float: right;
   font-family: Bungee;
 }
