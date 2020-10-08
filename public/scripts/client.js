@@ -21,16 +21,17 @@ const submitHandler = function (event) {
   const $form = $(this);
   const text = $form.serialize();
   const counterNum = $('#tweet-text').val().length;
-  if (counterNum >= 140) {
-    alert('Maximum characters exceeded');
-  } else if (counterNum === 0) {
-    alert('Please create a valid tweet');
+  if (counterNum >= 140 || counterNum === 0) {
+    // alert('Maximum characters exceeded');
+    $(".error-message").slideDown();
+    $(".error-message").css('visibility', 'visible');
   } else {
     $.ajax({
       method: "POST",
       url: "/tweets/",
       data: text
     }).then(function () {
+      $(".error-message").slideUp();
       console.log('Successfully submitted');
       document.getElementById("tweet-form").reset();
       $.ajax('/tweets/', { method: 'GET' })
