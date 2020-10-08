@@ -68,7 +68,6 @@ const submitHandler = function (event) {
 
 const renderTweets = function (tweets) {
   const $container = $(".tweets-container");
-  $container.html('');
   for (let tweet of tweets) {
     const $tweetElement = createTweetElement(tweet);
     console.log("create tweet", $tweetElement);
@@ -77,33 +76,30 @@ const renderTweets = function (tweets) {
 };
 
 const escape = function (str) {
-  let p = document.createElement('p');
-  p.appendChild(document.createTextNode(str));
-  return p.innerHTML;
+  let div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
 };
-
-const safeHTML = `<p>${escape(text.user.handle)}</p>`;
 
 const createTweetElement = function (tweet) {
   const dateObj = new Date(tweet.created_at * 1000);
   const utcString = dateObj.toUTCString();
   time = utcString.slice(-11, -4);
   const $tweet = $(`<article class="display-tweet">
-    <header class="header-tweet-child">
-    <div>
-    <img src='${tweet.user.avatars}'/>
-    <p class="name">${tweet.user.name}</p>
-    </div>
-    <p class="handle">${tweet.user.handle}</p>
-    </header >
-    safeHTML
-    <footer class="footer-tweet-child">
-    <p class="days-ago">${time}</p>
-    <p class="icons"> &#127988 &#x2794 &#10084 </p>
-    </footer>
-    </article >;`);
+  <header class="header-tweet-child">
+  <div>
+  <img src='${tweet.user.avatars}'/>
+  <p class="name">${tweet.user.name}</p>
+  </div>
+  <p class="handle">${tweet.user.handle}</p>
+  </header >
+  <p class="tweet">${escape(tweet.content.text)}</p> 
+  <footer class="footer-tweet-child">
+  <p class="days-ago">${time}</p>
+  <p class="icons"> &#127988 &#x2794 &#10084 </p>
+  </footer>
+  </article >;`);
   return $tweet;
 };
 
 
-// <p class="tweet">${tweet.content.text}</p> 
