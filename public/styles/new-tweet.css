@@ -29,3 +29,27 @@ section {
 .redColor {
   color: red; 
 }
+
+.error-message {
+  visibility: hidden;
+}
+
+.error-message-visible {
+  visibility: visible;
+  color: #D8000C;
+  background-color: #FFD2D2;
+  margin: 6px 0px;
+  padding:12px;
+  box-shadow:1px 1px 3px #888;
+}
+
+
+
+
+/* border: 4px solid red;
+padding: 10px;
+border-radius: 5px;
+font-size: 20px;
+font-weight: 800;
+text-transform: uppercase; */
+/* text-align: center; */
