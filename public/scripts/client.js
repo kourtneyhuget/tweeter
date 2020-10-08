@@ -71,6 +71,7 @@ const submitHandler = function (event) {
 
 const renderTweets = function (tweets) {
   const $container = $(".tweets-container");
+  $('.counter').html(140);
   for (let tweet of tweets) {
     const $tweetElement = createTweetElement(tweet);
     console.log("create tweet", $tweetElement);

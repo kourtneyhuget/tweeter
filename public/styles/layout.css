@@ -21,11 +21,11 @@ nav span {
 body {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  /* align-items: center; */
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Source Sans Pro", sans-serif
 }
 
 
@@ -35,15 +35,49 @@ body {
 
 main {
   display: flex;
-  width: 90%;
+  width: 100%;
   background-color: #f4f1ec;
-  margin: 0 auto;
+  /* display: -webkit-flex;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap; */
  }
 
 .container {
+  margin: auto;
   display: flex;
+  /* margin: 15px; */
+  /* display: flex; */
   flex-direction: column;
-  align-items: center;
-  align-content: center;
-  justify-content: center;
+  /* display: -webkit-flex;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap; */
+  /* align-items: center; */
+  /* align-content: center; */
+  /* justify-content: center; */
  }
+
+ @media only screen and (min-width: 1024px) {
+  body {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+  } 
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    margin: 120px 0px 40px 40px;
+  }
+
+  #main-header {
+    width: 40%;
+    margin-top: 8em;
+    margin-right: 5em;
+  }
+
+  .new-tweet {
+    width: 60%;
+    /* margin-right: 3em; */
+    padding: 1.5em;
+  }
+};

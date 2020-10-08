@@ -5,6 +5,7 @@ section {
 .new-tweet {
   align-items: center;
   justify-content: center;
+  padding: 0px 40px;
 }
 
 #tweet-text {
@@ -35,21 +36,19 @@ section {
 }
 
 .error-message-visible {
+  width: 100%;
   visibility: visible;
   color: #D8000C;
   background-color: #FFD2D2;
-  margin: 6px 0px;
-  padding:12px;
+  padding:16px;
   box-shadow:1px 1px 3px #888;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 20px;
+  border-radius: 10px;
 }
 
 
 
 
-/* border: 4px solid red;
-padding: 10px;
-border-radius: 5px;
-font-size: 20px;
-font-weight: 800;
-text-transform: uppercase; */
-/* text-align: center; */
+

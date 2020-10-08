@@ -29,7 +29,12 @@
   <!-- App JS -->
   <script type="text/javascript" src="/scripts/client.js"></script>
   <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+
+  <!-- Disabling Viewport Zooming -->
+  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
+
 </head>
+
 
 <body>
   <!-- Top nav bar (fixed) -->
@@ -38,18 +43,18 @@
     <div><b>Write</b> a new tweet</div>
   </nav>
 
-  <header id="main-header">
-    <div id="header-image">
-      <img src="/images/profile-hex.png">
-    </div>
-    <br>
-    <div id="header-name">
-      <h2>Kourtney Huget</h2>
-    </div>
-  </header>
 
   <!-- Page-specific (main) content here -->
   <main class="container">
+    <header id="main-header">
+      <div id="header-image">
+        <img src="/images/profile-hex.png">
+      </div>
+      <br>
+      <div id="header-name">
+        <h2>Kourtney Huget</h2>
+      </div>
+    </header>
     <section class="new-tweet">
       <p class="error-message">&#x24E7; ERROR! Is your tweet over the maximum characters? Did you try
         and tweet a tweet with no content? Let's try this again...</p>
@@ -63,29 +68,24 @@
           <output name="counter" class="counter" for="tweet-text">140</output>
         </div>
       </form>
-    </section>
-    <section class="tweets-container">
-      <!-- <article class="display-tweet">
-        <header class="header-tweet-child">
-          <div>
-            <img src="https://i.imgur.com/nlhLi3I.png" />
-            <p> Kourt</p>
-          </div>
-          <p class="handle">@khuget</p>
-        </header>
-        <p class="tweet">here is the tweet</p>
-        <footer class="footer-tweet-child">
-          <p class="days-ago">10 days-ago</p>
-          <p class="icons"> &#127988 &#x2794 &#10084 </p>
-        </footer>
-      </article> -->
+      <section class="tweets-container">
+        <!-- <article class="display-tweet">
+          <header class="header-tweet-child">
+            <div>
+              <img src="https://i.imgur.com/nlhLi3I.png" />
+              <p> Kourt</p>
+            </div>
+            <p class="handle">@khuget</p>
+          </header>
+          <p class="tweet">here is the tweet</p>
+          <footer class="footer-tweet-child">
+            <p class="days-ago">10 days-ago</p>
+            <p class="icons"> &#127988 &#x2794 &#10084 </p>
+          </footer>
+        </article> -->
+      </section>
     </section>
   </main>
 </body>
 
 </html>
-
-
-
-<!-- <p id="error-length" Error! You have exceeded to maximum character allowance. Let us try this again...></p>
-  <p id="error-empty" Error! You tried to tweet a tweet with no content. Let us try this again...></p> -->
