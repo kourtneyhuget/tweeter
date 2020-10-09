@@ -9,6 +9,7 @@ $(document).ready(function () {
   loadtweets();
 });
 
+// getting the tweet from the database 
 const loadtweets = function () {
   $.ajax('/tweets/', { method: 'GET' })
     .then(function (res, err) {
@@ -16,6 +17,7 @@ const loadtweets = function () {
     });
 };
 
+// function to use ajax rather than page needing to be refreshed when new tweet is submitted
 const submitHandler = function (event) {
   event.preventDefault();
   const $form = $(this);
@@ -43,6 +45,7 @@ const submitHandler = function (event) {
   }
 };
 
+// render a tweet by looping through an array of objects
 const renderTweets = function (tweets) {
   const $container = $(".tweets-container");
   $('.counter').html(140);
@@ -52,6 +55,7 @@ const renderTweets = function (tweets) {
   }
 };
 
+// XSS function
 const escape = function (str) {
   let div = document.createElement('div');
   div.appendChild(document.createTextNode(str));
