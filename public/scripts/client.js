@@ -88,7 +88,8 @@ const escape = function (str) {
 const createTweetElement = function (tweet) {
   const dateObj = new Date(tweet.created_at * 1000);
   const utcString = dateObj.toUTCString();
-  time = utcString.slice(-11, -4);
+  console.log(utcString);
+  time = utcString.slice(0, 11);
   const $tweet = $(`<article class="display-tweet">
   <header class="header-tweet-child">
   <div>
