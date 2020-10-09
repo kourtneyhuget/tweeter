@@ -34,7 +34,6 @@ const submitHandler = function (event) {
     }).then(function () {
       $('.error-message').slideDown();
       errorMessage.removeClass('error-message-visible');
-      console.log('Successfully submitted');
       document.getElementById("tweet-form").reset();
       $.ajax('/tweets/', { method: 'GET' })
         .then(function (res, err) {
@@ -44,37 +43,11 @@ const submitHandler = function (event) {
   }
 };
 
-// const data = [
-//   {
-//     "user": {
-//       "name": "Newton",
-//       "avatars": "https://i.imgur.com/73hZDYK.png",
-//       "handle": "@SirIsaac"
-//     },
-//     "content": {
-//       "text": "If I have seen further it is by standing on the shoulders of giants"
-//     },
-//     "created_at": 1461116232227
-//   },
-//   {
-//     "user": {
-//       "name": "Descartes",
-//       "avatars": "https://i.imgur.com/nlhLi3I.png",
-//       "handle": "@rd"
-//     },
-//     "content": {
-//       "text": "Je pense , donc je suis"
-//     },
-//     "created_at": 1461113959088
-//   }
-// ];
-
 const renderTweets = function (tweets) {
   const $container = $(".tweets-container");
   $('.counter').html(140);
   for (let tweet of tweets) {
     const $tweetElement = createTweetElement(tweet);
-    console.log("create tweet", $tweetElement);
     $container.prepend($tweetElement);
   }
 };
@@ -101,7 +74,7 @@ const createTweetElement = function (tweet) {
   <p class="tweet">${escape(tweet.content.text)}</p> 
   <footer class="footer-tweet-child">
   <p class="days-ago">${time}</p>
-  <p class="icons"> &#127988 &#x2794 &#10084 </p>
+  <p class="icons"> 	&#128681 &#x1f501 &#128420 </p>
   </footer>
   </article >;`);
   return $tweet;
