@@ -32,7 +32,7 @@ const submitHandler = function (event) {
       url: "/tweets/",
       data: text
     }).then(function () {
-      $('.error-message').slideUp();
+      $('.error-message').slideDown();
       errorMessage.removeClass('error-message-visible');
       console.log('Successfully submitted');
       document.getElementById("tweet-form").reset();
