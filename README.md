@@ -2,8 +2,8 @@
 
 Tweeter is a simple, single-page AJAX-based Twitter clone that uses jQuery, HTML5 and CSS3. 
 
-!["Tweeter mobile view"](/Users/kourtneyhuget/lighthouse/w4/tweeter/docs/gif-mobile.mov)
-!["Tweeter desktop view"](/Users/kourtneyhuget/lighthouse/w4/tweeter/docs/tweeter-mobiledisplay)
+!["Tweeter mobile view"](/Users/kourtneyhuget/lighthouse/w4/tweeter/docs/tweeter-desktop.gif)
+!["Tweeter desktop view"](/Users/kourtneyhuget/lighthouse/w4/tweeter/docs/tweeter-mobile.gif)
 
 ## Getting Started
 
